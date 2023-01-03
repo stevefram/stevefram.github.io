@@ -108,10 +108,10 @@
       sample into a new file, and add this import statement:
       import oneschemaImporter from '@oneschema/importer'
     */
-    const importer = oneschemaImporter({
+   const importer = oneschemaImporter({
       clientId: "669ccda9-eddb-43b0-897d-6303cceda788",
       templateKey: "fab_test",
-      importConfig: { type: "local" },
+      importConfig: { type: "webhook", key: "webhooksite" },
       userJwt: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiPFVTRVJfSUQ-IiwiaXNzIjoiNjY5Y2NkYTktZWRkYi00M2IwLTg5N2QtNjMwM2NjZWRhNzg4In0.gQDP7044jAPcqzoHQIrwuZHfhPZsOV-LTsHISY8SOS0",
     })
 
