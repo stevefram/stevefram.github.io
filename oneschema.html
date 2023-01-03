@@ -1,0 +1,59 @@
+<html>
+<head>
+  <title>OneSchema Demo</title>
+</head>
+<body>
+  <h1>oneschema</h1>
+  
+  <script src="https://d3ah8o189k1llu.cloudfront.net/oneschema-importer-0.3.latest.min.js"></script>
+  <style>
+  .oneschema-iframe {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+  }
+  </style>
+  <script type="text/javascript">
+    /*
+      if you would like to use this sample in a JavaScript file as part of your
+      build you can install the npm package '@oneschema/importer', copy this
+      sample into a new file, and add this import statement:
+      import oneschemaImporter from '@oneschema/importer'
+    */
+   const importer = oneschemaImporter({
+      clientId: "669ccda9-eddb-43b0-897d-6303cceda788",
+      templateKey: "fab_test",
+      importConfig: { type: "webhook", key: "webhooksite" },
+      userJwt: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiPFVTRVJfSUQ-IiwiaXNzIjoiNjY5Y2NkYTktZWRkYi00M2IwLTg5N2QtNjMwM2NjZWRhNzg4In0.gQDP7044jAPcqzoHQIrwuZHfhPZsOV-LTsHISY8SOS0",
+    })
+
+    function launchOneSchema() {
+      importer.launch()
+
+      importer.on("success", (data) => {
+        // TODO: handle success
+        console.log(data)
+      })
+
+      importer.on("cancel", () => {
+        // TODO: handle cancel
+      })
+
+      importer.on("error", (message) => {
+        // TODO: handle errors
+        console.log(message)
+      })
+    }
+  </script>
+
+  <button onclick="launchOneSchema()">Launch embed</button>
+       <p>Thank you for visiting our site</p>
+  </body>
+</html>
+
+
+
