@@ -83,6 +83,88 @@
 </button>
 <!-- End Osmos File Upload Button -->
   
+  
+  <h2>oneschema demo</h2>
+  <h1>osmosdemo v2</h1>
+  <!-- Osmos File Upload Button -->
+<!-- See this link for more docs. https://docs.osmos.io/osmos-uploader/webpage-integration -->
+<script src="https://cdn.osmos.io/button/embed/v1/OsmosButton.js"></script>
+<script>
+  Osmos.configure({
+  schema: {
+    fields: [
+      {
+        name: "customer_full_name",
+        displayName: "customer_full_name",
+        description: "<Your field description here>"
+      },
+      {
+        name: "service_definition_name",
+        displayName: "service_definition_name",
+        description: "<Your field description here>"
+      },
+      {
+        name: "funding_source_name",
+        displayName: "funding_source_name",
+        description: "<Your field description here>"
+      },
+      {
+        name: "provider_name",
+        displayName: "provider_name",
+        description: "<Your field description here>"
+      },
+      {
+        name: "unit_count",
+        displayName: "unit_count",
+        description: "<Your field description here>"
+      },
+      {
+        name: "delivered_on",
+        displayName: "delivered_on",
+        description: "<Your field description here>"
+      },
+      {
+        name: "site",
+        displayName: "site",
+        description: "<Your field description here>"
+      },
+      {
+        name: "unit_price",
+        displayName: "unit_price",
+        description: "<Your field description here>"
+      },
+      {
+        name: "total_cost",
+        displayName: "total_cost",
+        description: "<Your field description here>"
+      }
+    ]
+  },
+  token: "idlqndgn2dkdomfv0dwsbtqnyklhzqy-1fsdsurpd9cqwaykr",
+  uploadDescription: "<Include a description of your uploader upload here which will be shown to users that click the uploader>",
+  
+
+  // Set to false to show the schema for the destination connector in the uploader on the file upload screen.
+  hideUploadSchema: true,
+
+  // Set to false to show the uploader description on the file upload screen.
+  hideUploadDescription: true,
+
+  // Set to false to show the advanced version of the uploader, with formulas, SmartFill, and QuickFixes.
+  disableAdvancedMode: true,
+
+  // Maximum number of records from the uploaded file to display in the User Interface.
+ // This value is capped at 100,000 and higher values will default back to 100,000.
+  // Can be lowered to increase performance when using expensive validators.
+  maxRecords: 100000,
+
+});
+</script>
+<button class="ftl-button" onclick="Osmos.handleClick('idlqndgn2dkdomfv0dwsbtqnyklhzqy-1fsdsurpd9cqwaykr')">
+  Upload Your Data
+</button>
+<!-- End Osmos File Upload Button -->
+  
        <p>Thank you for visiting our site</p>
   </body>
 </html>
